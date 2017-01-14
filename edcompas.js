@@ -42,6 +42,10 @@ function calculateBearing(){
 
     var initialBearing = (Math.atan2(deltaLon, deltaLat)) * (180/Math.PI);
 
+    if (initialBearing < 0) {
+      initialBearing = 360 + initialBearing;
+    }
+
     initialBearing = Math.round(initialBearing);
 
     console.log(initialBearing);

@@ -7,15 +7,24 @@ body {
 }
 
 /* basic stylings ------------------------------------------ */
-.container 		{ 
-  margin:50px auto; 
+.center 		{ 
   align-items: center;
   justify-content: center;
 }
+
+.margin-large {
+  margin-top:50px; 
+}
+
+.margin-small {
+  margin-top: 20px;
+}
+
 h2 		 { 
   text-align:center; 
   margin-bottom:50px; 
 }
+
 h2 small { 
   font-weight:normal; 
   color:#000; 
@@ -37,6 +46,12 @@ h2 small {
 p{
   font-size: .8em;
   color: grey;
+  padding: 1em;
+}
+
+b{
+  color: #FFF;
+  font-weight: normal;
 }
 
 a{
