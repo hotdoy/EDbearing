@@ -1,11 +1,16 @@
 * { box-sizing:border-box; }
 
+body {
+  background-color: #000;
+  color: #FFF;
+  font-family:'Roboto'; 
+}
+
 /* basic stylings ------------------------------------------ */
 .container 		{ 
-  font-family:'Roboto'; 
   margin:50px auto; 
-  display:block; 
-  background:#FFF;
+  align-items: center;
+  justify-content: center;
 }
 h2 		 { 
   text-align:center; 
@@ -16,8 +21,29 @@ h2 small {
   color:#000; 
   display:block; 
 }
-.footer 	{ text-align:center; }
-.footer a  { color:#000; }
+
+.flex {
+  display: flex;
+}
+
+#bearing {
+  font-size: 5em;
+}
+
+#bearing::after {
+  content: "°";
+}
+
+p{
+  font-size: .8em;
+  color: grey;
+}
+
+a{
+  font-size: .7em;
+  color: #3aa35a;
+  text-decoration: none;
+}
 
 /* form starting stylings ------------------------------- */
 .group 			  { 
@@ -30,9 +56,16 @@ input 				{
   display:block;
   width:300px;
   border:none;
-  border-bottom:1px solid #000;
+  border-bottom:1px solid orange;
+  background-color: #000;
+  color: #FFF;
 }
 input:focus 		{ outline:none; }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 
 /* LABEL ======================================= */
 label 				 {
@@ -49,10 +82,10 @@ label 				 {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ label, input:valid ~ label {
   top:-20px;
   font-size:14px;
-  color:#5264AE;
+  color:orange;
 }
 
 /* BOTTOM BARS ================================= */

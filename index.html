@@ -13,43 +13,58 @@
 
 	<body>
 
-		<div class="container">
-
+		<div class="container flex">
 			<form id="form">
+				<div class="flex">
+					<div class="group">
+						<input id="latStart" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Starting LAT</label>
+					</div>
 
-				<div class="group">
-					<input id="latStart" type="number" required>
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>latStart</label>
+					<div class="group">
+						<input id="lonStart" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Starting LON</label>
+					</div>
 				</div>
+				
+				<br>
 
-				<div class="group">
-					<input id="lonStart" type="number" required>
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>lonStart</label>
+				<div class="flex">
+					<div class="group">
+						<input id="latDest" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Destination LAT</label>
+					</div>
+
+					<div class="group">
+						<input id="lonDest" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Destination LON</label>
+					</div>
 				</div>
-
-				<div class="group">
-					<input id="latDest" type="number" required>
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>latDest</label>
-				</div>
-
-				<div class="group">
-					<input id="lonDest" type="number" required>
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>lonDest</label>
-				</div>
-
 			</form>
-
-			<div id="bearing"></div>
-
 		</div>
+		<div class="container flex">
+			<div id="bearing">0</div>
+		</div>
+		<div class="container flex">
+			<p>
+			EDbearing (or EDcompas) is a planetary navigation tool for Elite: Dangerous.<br>
+			1. Approach planet until Orbital Cruise.<br>
+			2. Stop ship completely (normal space).<br>
+			3. Enter starting coordinates. <br>
+			4. Enter destiation coordinates.<br>
+			5. Align ship compas with given bearing.<br><br>
+			<a href="https://www.paypal.me/hotdoy">Money here plzzz.</a>
+			</p>
+		</div>
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="edcompas.js"></script>
