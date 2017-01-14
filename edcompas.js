@@ -1,29 +1,34 @@
 //PAGE LOAD
 $(document).ready(function() {
 	console.log( "ready!" );
-	$("#root").html("<h1>EDbearing!!!</h1>");
-
+	// $("#root").append("<h1>EDbearing!!!</h1>");
 });
 
 
+
+$( "#latStart, #lonStart, #latDest, #lonDest" ).on('input', function() {
+  console.log( calculateBearing() );
+});
+
 //script from https://edbearingcalc.neocities.org/
-
-
 function calculateBearing(){
-    var latStart = document.getElementById("latStart").value;
-    var lonStart = document.getElementById("lonStart").value;
-    var latEnd = document.getElementById("latDest").value;
-    var lonEnd = document.getElementById("lonDest").value;
+    var latStart = parseFloat($("#latStart").val());
+    var lonStart = parseFloat($("#lonStart").val());
+    var latDest = parseFloat($("#latDest").val());
+    var lonDest = parseFloat($("#lonDest").val());
 
-    var deltaLat = latEnd - latStart;
-    var deltaLon = lonEnd - lonStart;
+    var deltaLat = latDest - latStart;
+    var deltaLon = lonDest - lonStart;
 
-    var heading = (Math.atan2(deltaLon, deltaLat) * (180/3.14159265));
+    var initialBearing = (Math.atan2(deltaLon, deltaLat) * (180/3.14159265));
 
-    if (heading <= 0) {
-        heading = 360 + heading;
+
+    if (initialBearing <= 0) {
+       initialBearing = 360 + initialBearing;
     }
-    
-    heading = Math.round(heading);
-    console.log(heading);
+
+    initialBearing = Math.round(initialBearing);
+
+    console.log(initialBearing);
+    $("#bearing").html(initialBearing);
 }
