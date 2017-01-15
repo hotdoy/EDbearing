@@ -6,6 +6,11 @@ body {
   font-family:'Roboto';
 }
 
+::selection {
+  background: #baffaa;
+  color: #fff;
+}
+
 footer {
   position: fixed;
   bottom: 10px;
@@ -17,16 +22,15 @@ footer a {
 }
 
 .page-content {
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
+  width: 750px;
+  margin-left: 20px;
 }
 
-::selection {
-  background: #baffaa;
-  color: #fff;
+@media (max-width: 750px) {
+  .page-content {
+    max-width: 95%;
+  }
 }
-
 
 /*FLEX--------------------------------------------------------*/
 .flex {
@@ -90,6 +94,7 @@ a{
 .card {
   padding-right: 1em;
   margin-right: 1em;
+  width: 200px;
 }
 
 
