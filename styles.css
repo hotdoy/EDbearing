@@ -12,13 +12,14 @@ body {
 }
 
 footer {
+  text-align: right;
   position: fixed;
   bottom: 10px;
   right: 10px;
 }
 
 footer a {
-  color: #353535;
+  color: grey;
 }
 
 .page-content {
