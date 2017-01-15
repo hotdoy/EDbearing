@@ -24,92 +24,101 @@
 	</head>
 
 	<body>
+		<div class="page-content">
+			<div class="margin-large flex center">
+				<form id="form">
+					<div class="flex">
+						<!-- STARTING COORDINATES -->
+						<div class="group">
+							<input id="latStart" type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Starting LAT</label>
+						</div>
 
-		<div class="center margin-large flex">
-			<form id="form">
-				<div class="flex">
-					<!-- STARTING COORDINATES -->
-					<div class="group">
-						<input id="latStart" type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Starting LAT</label>
+						<div class="group">
+							<input id="lonStart" type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Starting LON</label>
+						</div>
 					</div>
 
-					<div class="group">
-						<input id="lonStart" type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Starting LON</label>
+					<br>
+					<!-- DESTINATION -->
+					<div class="flex">
+						<div class="group">
+							<input id="latDest" type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Destination LAT</label>
+						</div>
+
+						<div class="group">
+							<input id="lonDest" type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Destination LON</label>
+						</div>
 					</div>
+				</form>
+			</div>
+			<!-- RESULT -->
+			<div class="flex center margin-small">
+				<div id="bearing">0</div>
+			</div>
+
+
+			<div class="flex center margin-small">
+
+				<div class="card">
+					<p>
+						<b>Ancient ruins 1</b><br>
+						SYNUEFE XR-H D11-102 | 1 B<br>
+						-31.7877<br>
+						-128.9711<br>
+					</p>
 				</div>
 
-				<br>
-				<!-- DESTINATION -->
-				<div class="flex">
-					<div class="group">
-						<input id="latDest" type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Destination LAT</label>
-					</div>
-
-					<div class="group">
-						<input id="lonDest" type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Destination LON</label>
-					</div>
+				<div class="card">
+					<p>
+						<b>Alien wreckages 1</b><br>
+						HIP 17403 | A 4 A<br>
+						-34.96<br>
+						-141.37<br>
+					</p>
 				</div>
-			</form>
-		</div>
-		<!-- RESULT -->
-		<div class="center flex">
-			<div id="bearing">0</div>
-		</div>
+				
+				<div class="card">
+					<p>
+						<b>Alien wreckages 2</b><br>
+						HIP 17862 | 6 C A<br>
+						30.33<br>
+						-98.58<br>
+					</p>
+				</div>
 
+				<div class="card">
+					<p>
+						<b>Alien wreckages 3</b><br>
+						Pleiades Sector AB-W | 9 A<br>
+						-26.3772<br>
+						97.6982<br>
+					</p>
+				</div>
 
-		<div class="center flex">
-
-			<p>
-				<b>Ancient ruins 1</b><br>
-				SYNUEFE XR-H D11-102 | 1 B<br>
-				-31.7877<br>
-				-128.9711<br>
-			</p>
-
-			<p>
-				<b>Alien wreckages 1</b><br>
-				HIP 17403 | A 4 A<br>
-				-34.96<br>
-				-141.37<br>
-			</p>
-
-			<p>
-				<b>Alien wreckages 2</b><br>
-				HIP 17862 | 6 C A<br>
-				30.33<br>
-				-98.58<br>
-			</p>
-
-			<p>
-				<b>Alien wreckages 3</b><br>
-				Pleiades Sector AB-W | 9 A<br>
-				-26.3772<br>
-				97.6982<br>
-			</p>
-
-		</div>
-		<div class="center flex">
-			<p>
-				EDbearing is a planetary navigation tool for Elite: Dangerous.<br>
-				1. Approach planet until Orbital Cruise.<br>
-				2. Stop ship completely (normal space).<br>
-				3. Enter starting coordinates. <br>
-				4. Enter destiation coordinates.<br>
-				5. Align ship compas with given bearing.<br><br>
-				<a href="https://www.paypal.me/hotdoy">Money here plzzz.</a>
-			</p>
+			</div>
+			<div class="flex center">
+				<p>
+					EDbearing is a planetary navigation tool for Elite: Dangerous.<br>
+					1. Approach planet until Orbital Cruise.<br>
+					2. Stop ship completely (normal space).<br>
+					3. Enter starting coordinates. <br>
+					4. Enter destiation coordinates.<br>
+					5. Align ship compas with given bearing.<br><br>
+					<a href="https://www.paypal.me/hotdoy">Money here plzzz.</a>
+				</p>
+			</div>
 		</div>
 
 
@@ -117,5 +126,8 @@
 		<script src="edcompas.js"></script>
 
 	</body>
+	<footer>
+		<a href="https://github.com/hotdoy/EDbearing" target="blank">github</a>
+	</footer>
 </html>
 

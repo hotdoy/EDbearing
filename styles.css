@@ -3,15 +3,47 @@
 body {
   background-color: #000;
   color: #FFF;
-  font-family:'Roboto'; 
+  font-family:'Roboto';
 }
 
-/* basic stylings ------------------------------------------ */
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+footer a {
+  color: #353535;
+}
+
+.page-content {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+::selection {
+  background: #baffaa;
+  color: #fff;
+}
+
+
+/*FLEX--------------------------------------------------------*/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .center 		{ 
   align-items: center;
-  justify-content: center;
 }
 
+.stretch {
+  align-items: stretch;
+}
+
+
+/*MARGIN-------------------------------------------------------*/
 .margin-large {
   margin-top:50px; 
 }
@@ -20,33 +52,19 @@ body {
   margin-top: 20px;
 }
 
-h2 		 { 
-  text-align:center; 
-  margin-bottom:50px; 
+
+/*TEXT-----------------------------------------------------------*/
+h1 {
+
 }
 
-h2 small { 
-  font-weight:normal; 
-  color:#000; 
-  display:block; 
-}
+h2 { 
 
-.flex {
-  display: flex;
-}
-
-#bearing {
-  font-size: 5em;
-}
-
-#bearing::after {
-  content: "°";
 }
 
 p{
   font-size: .8em;
   color: grey;
-  padding: 1em;
 }
 
 b{
@@ -60,10 +78,26 @@ a{
   text-decoration: none;
 }
 
+
+#bearing {
+  font-size: 5em;
+}
+
+#bearing::after {
+  content: "°";
+}
+
+.card {
+  padding-right: 1em;
+  margin-right: 1em;
+}
+
+
+
 /* form starting stylings ------------------------------- */
 .group 			  { 
   position:relative; 
-  margin-bottom:45px; 
+  padding-bottom: 20px;
 }
 input 				{
   font-size:18px;
@@ -71,7 +105,7 @@ input 				{
   display:block;
   width:300px;
   border:none;
-  border-bottom:1px solid orange;
+  border-bottom:1px solid #ffb000;
   background-color: #000;
   color: #FFF;
 }
@@ -100,7 +134,7 @@ label 				 {
 input:focus ~ label, input:valid ~ label {
   top:-20px;
   font-size:14px;
-  color:orange;
+  color:#ffb000;
 }
 
 /* BOTTOM BARS ================================= */
@@ -111,7 +145,7 @@ input:focus ~ label, input:valid ~ label {
   width:0;
   bottom:1px; 
   position:absolute;
-  background:orange; 
+  background:#ffb000; 
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;

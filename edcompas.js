@@ -1,6 +1,5 @@
-//PAGE LOAD
 $(document).ready(function() {
-	console.log( "ready!" );
+	console.log( "ApplicationStart" );
 
         $("#form").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter, . and -
@@ -21,25 +20,21 @@ $(document).ready(function() {
             e.preventDefault();
         }
     });
-
 });
-
 
 
 $( "#latStart, #lonStart, #latDest, #lonDest" ).on('input', function() {
-  console.log( calculateBearing() );
+  calculateBearing();
 });
 
-//script from https://edbearingcalc.neocities.org/
+
 function calculateBearing(){
     var latStart = $("#latStart").val() * Math.PI/180;
     var lonStart = $("#lonStart").val() * Math.PI/180;
     var latDest = $("#latDest").val() * Math.PI/180;
     var lonDest = $("#lonDest").val() * Math.PI/180;
-
     var deltaLon = lonDest - lonStart;
     var deltaLat = Math.log(Math.tan(Math.PI/4 + latDest/2)/Math.tan(Math.PI/4 + latStart/2));
-
     var initialBearing = (Math.atan2(deltaLon, deltaLat)) * (180/Math.PI);
 
     if (initialBearing < 0) {
@@ -47,8 +42,12 @@ function calculateBearing(){
     }
 
     initialBearing = Math.round(initialBearing);
-
     console.log(initialBearing);
-    $("#bearing").html(initialBearing);
 
+    if (isNaN(initialBearing)) {
+      $("#bearing").html("X");
+    }
+    else{
+      $("#bearing").html(initialBearing);
+    }
 }
