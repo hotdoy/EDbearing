@@ -23,11 +23,11 @@ footer a {
 }
 
 .page-content {
-  width: 750px;
+  width: 900px;
   margin-left: 20px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .page-content {
     max-width: 95%;
   }
@@ -96,6 +96,7 @@ a{
   padding-right: 1em;
   margin-right: 1em;
   width: 200px;
+  cursor: url(cursor.png), auto;
 }
 
 

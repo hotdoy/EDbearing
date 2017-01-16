@@ -51,3 +51,9 @@ function calculateBearing(){
       $("#bearing").html(initialBearing);
     }
 }
+
+function setDestination(lat, lon) {
+  $("#latDest").val(lat);
+  $("#lonDest").val(lon);
+  calculateBearing();
+}
