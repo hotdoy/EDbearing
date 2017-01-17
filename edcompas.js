@@ -20,6 +20,8 @@ $(document).ready(function() {
             e.preventDefault();
         }
     });
+
+  getParameterByName('lat');
 });
 
 
@@ -50,10 +52,34 @@ function calculateBearing(){
     else{
       $("#bearing").html(initialBearing);
     }
+
+    updateURL($("#latDest").val(), $("#lonDest").val());
 }
 
 function setDestination(lat, lon) {
   $("#latDest").val(lat);
   $("#lonDest").val(lon);
   calculateBearing();
+}
+
+function updateURL(lat, lon) {
+  if (lat.length > 0 && lon.length >0) {
+    if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?lat=' + lat + '&lon=' + lon;
+      window.history.pushState({path:newurl},'',newurl);
+    }
+  }
+  else {
+    if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.pushState({path:newurl},'',newurl);
+    }
+  }
+}
+
+function getParameterByName() {
+    var lat = RegExp('[?&]' + 'lat' + '=([^&]*)').exec(window.location.search);
+    var lon = RegExp('[?&]' + 'lon' + '=([^&]*)').exec(window.location.search);
+    console.log("Welp. this url got some coordinates in it so let's use them!")
+    setDestination(lat && decodeURIComponent(lat[1].replace(/\+/g, ' ')), lon && decodeURIComponent(lon[1].replace(/\+/g, ' ')));
 }
