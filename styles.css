@@ -101,6 +101,9 @@ a{
   cursor: url(cursor.png), auto;
 }
 
+.hidden {
+  visibility: hidden;
+}
 
 
 /* form starting stylings ------------------------------- */
@@ -108,7 +111,7 @@ a{
   position:relative; 
   padding-bottom: 20px;
 }
-input 				{
+input[type=number] {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -118,7 +121,35 @@ input 				{
   background-color: #000;
   color: #FFF;
 }
-input:focus 		{ outline:none; }
+
+.contenteditable {
+  display:inline-block;
+  border: solid 1px #000;
+  min-height: 1em;
+  min-width: 300px;
+  max-width: 95%;
+  font-size:3em;
+  display:block;
+  border:none;
+  background-color: #000;
+  color: grey;
+  margin-bottom: -15px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.contenteditable:hover {
+  background-color: #383838;
+  color: #FFF;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus { 
+  outline:none; 
+}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -140,7 +171,7 @@ label 				 {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
+input:focus ~ label, input:valid ~ label, input:visited ~ label {
   top:-20px;
   font-size:14px;
   color:#ffb000;

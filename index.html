@@ -32,21 +32,26 @@
 		</script>
 	</head>
 
-	<body>
+	<body id="top">
 		<div class="page-content center">
+
+		<div contenteditable="true" id="title" class="contenteditable"></div>
+
 			<div class="margin-large flex center">
+
 				<form id="form">
+
+					<!-- STARTING COORDINATES -->
 					<div class="flex">
-						<!-- STARTING COORDINATES -->
 						<div class="group">
-							<input id="latStart" type="text" required>
+							<input id="latStart" type="number" step="any" min="-180" max="180" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Starting LAT</label>
 						</div>
 
 						<div class="group">
-							<input id="lonStart" type="text" required>
+							<input id="lonStart" type="number" step="any" min="-180" max="180" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Starting LON</label>
@@ -54,22 +59,24 @@
 					</div>
 
 					<br>
+
 					<!-- DESTINATION -->
 					<div class="flex">
 						<div class="group">
-							<input id="latDest" type="text" required>
+							<input id="latDest" type="number" step="any" min="-180" max="180" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Destination LAT</label>
 						</div>
 
 						<div class="group">
-							<input id="lonDest" type="text" required>
+							<input id="lonDest" type="number" step="any" min="-180" max="180" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Destination LON</label>
 						</div>
 					</div>
+
 				</form>
 			</div>
 			<!-- RESULT -->
@@ -80,7 +87,7 @@
 
 			<div class="flex center margin-small">
 
-				<div class="card" onclick="setDestination('-31.7877', '-128.9711')">
+				<div class="card" onclick="setDestination('-31.7877', '-128.9711', 'Ancient ruins 1')">
 					<p>
 						<b>Ancient ruins 1</b><br>
 						SYNUEFE XR-H D11-102 | 1 B<br>
@@ -89,7 +96,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-34.96', '-141.37')">
+				<div class="card" onclick="setDestination('-34.96', '-141.37', 'Alien wreckages 1')">
 					<p>
 						<b>Alien wreckages 1</b><br>
 						HIP 17403 | A 4 A<br>
@@ -98,7 +105,7 @@
 					</p>
 				</div>
 				
-				<div class="card" onclick="setDestination('30.33', '-98.58')">
+				<div class="card" onclick="setDestination('30.33', '-98.58', 'Alien wreckages 2')">
 					<p>
 						<b>Alien wreckages 2</b><br>
 						HIP 17862 | 6 C A<br>
@@ -107,7 +114,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-26.3772', '97.6982')">
+				<div class="card" onclick="setDestination('-26.3772', '97.6982', 'Alien wreckages 3')">
 					<p>
 						<b>Alien wreckages 3</b><br>
 						Pleiades Sector AB-W | 9 A<br>
@@ -116,7 +123,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('6.94', '-102.4397')">
+				<div class="card" onclick="setDestination('6.94', '-102.4397', 'Crashed anaconda outpost')">
 					<p>
 						<b>Crashed anaconda outpost</b><br>
 						HR 5906 AB | 2 A<br>
@@ -125,7 +132,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('33.47', '-2.17')">
+				<div class="card" onclick="setDestination('33.47', '-2.17', 'Research facility 5592')">
 					<p>
 						<b>Research facility 5592</b><br>
 						HR 5991 | 1 B<br>
@@ -134,7 +141,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('44.81', '-31.38')">
+				<div class="card" onclick="setDestination('44.81', '-31.38', 'Dav’s Hope')">
 					<p>
 						<b>Dav’s Hope</b><br>
 						Hyades sector DR-V C2-23 | A 5<br>
@@ -143,7 +150,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-51.69', '-144.00')">
+				<div class="card" onclick="setDestination('-51.69', '-144.00', 'Abandoned base 1')">
 					<p>
 						<b>Abandoned base 1</b><br>
 						WREDGUIA JC-K c22-8 | 6 A<br>
@@ -152,7 +159,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-26.4080', '143.7232')">
+				<div class="card" onclick="setDestination('-26.4080', '143.7232', 'Abandoned base 2')">
 					<p>
 						<b>Abandoned base 2</b><br>
 						HIP 83237 | 3 B<br>
@@ -161,7 +168,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-51.69', '-144.00')">
+				<div class="card" onclick="setDestination('-51.69', '-144.00', 'Abandoned base 3')">
 					<p>
 						<b>Abandoned base 3</b><br>
 						WREDGUIA JC-K c22-8 | 6 A<br>
@@ -170,7 +177,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-87.04', '-10.52')">
+				<div class="card" onclick="setDestination('-87.04', '-10.52', 'Orion’s Folly')">
 					<p>
 						<b>Orion’s Folly</b><br>
 						Col 285 sector UZ-O C6-9 | B 6<br>
@@ -179,7 +186,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-39.0703', '-170.2777')">
+				<div class="card" onclick="setDestination('-39.0703', '-170.2777', 'Magma geysers')">
 					<p>
 						<b>Magma geysers</b><br>
 						HIP 17692 | A 6 B<br>
@@ -188,7 +195,7 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('', '')">
+				<div class="card" href="#" onclick="setDestination('', '', 'Fumarolles and chimneys')">
 					<p>
 						<b>Fumarolles and chimneys</b><br>
 						LTT 13904 | B 1 A<br>
