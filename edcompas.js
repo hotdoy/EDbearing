@@ -1,7 +1,13 @@
 $(document).ready(function() {
 	console.log( "ApplicationStart" );
+
 	var title = getParameterByName();
-	document.title = title + ' | EDbearing';
+	if (title) {
+		document.title = title + ' | EDbearing';
+	}
+	else{
+		document.title ='EDbearing';
+	}
 });
 
 
@@ -32,7 +38,18 @@ function calculateBearing(){
 			$("#bearing").html(initialBearing);
 		}
 
-		updateURL($("#latDest").val(), $("#lonDest").val(), $("#title").text());
+		updateURL(
+			$("#latDest").val(),
+			$("#lonDest").val(),
+			$("#title").text()
+		);
+
+			if ($("#title").text()) {
+		document.title = $("#title").text() + ' | EDbearing';
+	}
+	else{
+		document.title ='EDbearing';
+	}
 }
 
 function setDestination(lat, lon, title) {
@@ -40,7 +57,6 @@ function setDestination(lat, lon, title) {
 	$("#lonDest").val(lon);
 	$("#title").text(title);
 	calculateBearing();
-	document.title = title + ' | EDbearing';
 }
 
 function updateURL(lat, lon, title) {
