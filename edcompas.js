@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	console.log( "ApplicationStart" );
-	getParameterByName('lat');
+	var title = getParameterByName();
+	document.title = title + ' | EDbearing';
 });
 
 
@@ -39,6 +40,7 @@ function setDestination(lat, lon, title) {
 	$("#lonDest").val(lon);
 	$("#title").text(title);
 	calculateBearing();
+	document.title = title + ' | EDbearing';
 }
 
 function updateURL(lat, lon, title) {
@@ -66,6 +68,8 @@ function getParameterByName() {
 		lon && decodeURIComponent(lon[1].replace(/\+/g, ' ')),
 		title && decodeURIComponent(title[1].replace(/\+/g, ' '))
 	);
+
+	return title && decodeURIComponent(title[1].replace(/\+/g, ' '));
 }
 
 $(".card").click(function() {
