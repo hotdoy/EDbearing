@@ -3,12 +3,7 @@ http://www.hotdoy.ca/edbearing/
 A planetary navigation tool for Elite: Dangerous.  
 Don't hesitate to open an issue for any suggestion or idea you might have.
 
-##v1.3 hotfix 1
-Small update this morning.
-* Fixed title not triggering url change.
-
-
-##v1.3
+## Latest update (v1.3)
 Mostly stuff to enable easy sharing of destinations.
 * "Secret" editable div visible on hover to add custom title.
 * If a title is added, document use said title.
