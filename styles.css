@@ -22,6 +22,12 @@ footer {
 
 footer a {
   color: grey;
+  font-size: 0.8em
+}
+
+footer a:hover {
+  color: grey;
+  font-size: 0.8em
 }
 
 .page-content {
@@ -80,9 +86,21 @@ b{
 }
 
 a{
-  font-size: .7em;
-  color: #3aa35a;
+  font-size: 1em;
+  color: #FFF;
   text-decoration: none;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+a:hover{
+  font-size: 1em;
+  color: orange;
+  text-decoration: none;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
 }
 
 
