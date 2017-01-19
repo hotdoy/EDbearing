@@ -1,3 +1,5 @@
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/hotdoy)
+
 # EDbearing
 http://www.hotdoy.ca/edbearing/  
 A planetary navigation tool for Elite: Dangerous.  
