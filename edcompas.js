@@ -41,11 +41,11 @@ function calculateBearing(){
 		updateURL(
 			$("#latDest").val(),
 			$("#lonDest").val(),
-			$("#title").text()
+			$("#title").val()
 		);
 
-			if ($("#title").text()) {
-		document.title = $("#title").text() + ' | EDbearing';
+			if ($("#title").val()) {
+		document.title = $("#title").val() + ' | EDbearing';
 	}
 	else{
 		document.title ='EDbearing';
@@ -55,7 +55,7 @@ function calculateBearing(){
 function setDestination(lat, lon, title) {
 	$("#latDest").val(lat);
 	$("#lonDest").val(lon);
-	$("#title").text(title);
+	$("#title").val(title);
 	calculateBearing();
 }
 

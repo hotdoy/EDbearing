@@ -74,17 +74,29 @@ p{
   color: grey;
 }
 
-b{
+b {
   color: #FFF;
   font-weight: normal;
+    transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
 }
 
-a{
-  font-size: .7em;
-  color: #3aa35a;
+a {
+  font-size: 1em;
+  color: white;
   text-decoration: none;
+    transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
 }
 
+a:hover {
+  color: orange;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
 
 #bearing {
   font-size: 5em;
@@ -122,11 +134,10 @@ input[type=number] {
   color: #FFF;
 }
 
-.contenteditable {
+.title {
   display:inline-block;
   border: solid 1px #000;
   min-height: 1em;
-  min-width: 300px;
   max-width: 95%;
   font-size:3em;
   display:block;
@@ -139,7 +150,7 @@ input[type=number] {
   -webkit-transition:0.2s ease all;
 }
 
-.contenteditable:hover {
+.title:hover {
   background-color: #383838;
   color: #FFF;
   transition:0.2s ease all; 
