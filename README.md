@@ -19,3 +19,5 @@ Mostly stuff to enable easy sharing of destinations.
 * Added donation button.
 * Added target blank on external links.
 * Added a dark theme for Chrome on Android.
+* Fixed a bunch of typos. (Thx Dr Kaii).
+* Added a black div that fades out on document ready.
