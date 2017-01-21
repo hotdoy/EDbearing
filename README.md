@@ -13,5 +13,5 @@ Mostly stuff to enable easy sharing of destinations.
 * Shareable url with preset destination, title and custom document title.
 * Using a preset destination scroll to top of page.
 * Using preset destination fill custom title field and document title.
-* Destination field now use type=number instead of text giving the option to use arrows on keyboard.
-* no need to constantly check to allow only numbers.
+* Destination field now use type number instead of text giving the option to use arrows on keyboard.
+* Removed a function that used to allow only numbers in said text field.
