@@ -15,3 +15,7 @@ Mostly stuff to enable easy sharing of destinations.
 * Using preset destination fill custom title field and document title.
 * Destination field now use type number instead of text giving the option to use arrows on keyboard.
 * Removed a function that used to allow only numbers in said text field.
+* Added a new icon.
+* Added donation button.
+* Added target blank on external links.
+* Added a dark theme for Chrome on Android.
