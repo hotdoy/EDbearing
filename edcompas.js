@@ -3,11 +3,16 @@ $(document).ready(function() {
 
 	var title = getParameterByName();
 	if (title) {
-		document.title = title + ' | EDbearing';
+		document.title = title + ' ― EDbearing';
 	}
 	else{
 		document.title ='EDbearing';
 	}
+
+	$( ".loader-bg" ).fadeOut( 1000, function() {});
+	$( ".loader-logo" ).fadeOut( 1000, function() {});
+
+
 });
 
 
@@ -45,7 +50,7 @@ function calculateBearing(){
 		);
 
 			if ($("#title").text()) {
-		document.title = $("#title").text() + ' | EDbearing';
+		document.title = $("#title").text() + ' ― EDbearing';
 	}
 	else{
 		document.title ='EDbearing';
@@ -78,7 +83,7 @@ function getParameterByName() {
 	var lat = RegExp('[?&]' + 'lat' + '=([^&]*)').exec(window.location.search);
 	var lon = RegExp('[?&]' + 'lon' + '=([^&]*)').exec(window.location.search);
 	var title = RegExp('[?&]' + 'title' + '=([^&]*)').exec(window.location.search);
-	console.log("Welp. this url got some coordinates in it so let's use them!")
+	console.log("Coordinates in url!")
 	setDestination(
 		lat && decodeURIComponent(lat[1].replace(/\+/g, ' ')),
 		lon && decodeURIComponent(lon[1].replace(/\+/g, ' ')),
