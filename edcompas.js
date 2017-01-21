@@ -10,7 +10,7 @@ $(document).ready(function() {
 	}
 
 	$( ".loader-bg" ).fadeOut( 1000, function() {});
-	$( ".loader-logo" ).fadeOut( 800, function() {});
+	// $( ".loader-logo" ).fadeOut( 800, function() {});
 
 
 });
