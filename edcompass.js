@@ -15,7 +15,6 @@ $(document).ready(function() {
 
 });
 
-
 $( "#latStart, #lonStart, #latDest, #lonDest, #title" ).on('input', function() {
 	calculateBearing();
 });

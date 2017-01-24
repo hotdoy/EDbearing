@@ -54,14 +54,14 @@
 					<!-- STARTING COORDINATES -->
 					<div class="flex">
 						<div class="group">
-							<input id="latStart" type="number" step="any" min="-180" max="180" required>
+							<input id="latStart" type="number" step="any" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Starting LAT</label>
 						</div>
 
 						<div class="group">
-							<input id="lonStart" type="number" step="any" min="-180" max="180" required>
+							<input id="lonStart" type="number" step="any" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Starting LON</label>
@@ -73,14 +73,31 @@
 					<!-- DESTINATION -->
 					<div class="flex">
 						<div class="group">
-							<input id="latDest" type="number" step="any" min="-180" max="180" required>
+							<input id="latDest" type="number" step="any" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Destination LAT</label>
 						</div>
 
 						<div class="group">
-							<input id="lonDest" type="number" step="any" min="-180" max="180" required>
+							<input id="lonDest" type="number" step="any" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Destination LON</label>
+						</div>
+					</div>
+
+					<!-- RADIUS -->
+					<div class="flex">
+						<div class="group">
+							<input id="latDest" type="number" step="any" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Destination LAT</label>
+						</div>
+
+						<div class="group">
+							<input id="radius" type="number" step="any" required>
 							<span class="highlight"></span>
 							<span class="bar"></span>
 							<label>Destination LON</label>
@@ -196,15 +213,6 @@
 					</p>
 				</div>
 
-				<div class="card" onclick="setDestination('-39.0703', '-170.2777', 'HIP 17692 | A 6 B')">
-					<p>
-						<b>Magma geysers</b><br>
-						HIP 17692 | A 6 B<br>
-						-39.0703<br>
-						-170.2777<br>
-					</p>
-				</div>
-
 			</div>
 			<div class="flex center">
 				<p>
@@ -221,7 +229,8 @@
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="edcompas.js"></script>
+		<script src="edcompass.js"></script>
+		<script src="gamepad.js"></script>
 	</body>
 	<footer>
 		<a href="https://github.com/hotdoy/EDbearing" target="blank">v1.3</a>

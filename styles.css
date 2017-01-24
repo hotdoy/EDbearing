@@ -211,7 +211,7 @@ label 				 {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label, input:visited ~ label {
+input:focus ~ label, input:valid ~ label, input:visited ~ label, input:not(:empty) ~ label {
   top:-20px;
   font-size:14px;
   color:#ffb000;
@@ -230,9 +230,11 @@ input:focus ~ label, input:valid ~ label, input:visited ~ label {
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
+
 .bar:before {
   left:50%;
 }
+
 .bar:after {
   right:50%; 
 }
@@ -242,26 +244,32 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
+@media (max-width: 648px) {
+  .bar {
+    margin-bottom: 10px;
+  }
+}
+
 /* HIGHLIGHTER ================================== */
-.highlight {
+/*.highlight {
   position:absolute;
   height:60%; 
-  width:100px; 
+  width:300px; 
   top:25%; 
   left:0;
   pointer-events:none;
   opacity:0.5;
-}
+}*/
 
 /* active state */
-input:focus ~ .highlight {
+/*input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
-}
+}*/
 
 /* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
+/*@-webkit-keyframes inputHighlighter {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
@@ -272,4 +280,4 @@ input:focus ~ .highlight {
 @keyframes inputHighlighter {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
-}
+}*/
