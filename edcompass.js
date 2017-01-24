@@ -82,7 +82,7 @@ function getParameterByName() {
 	var lat = RegExp('[?&]' + 'lat' + '=([^&]*)').exec(window.location.search);
 	var lon = RegExp('[?&]' + 'lon' + '=([^&]*)').exec(window.location.search);
 	var title = RegExp('[?&]' + 'title' + '=([^&]*)').exec(window.location.search);
-	console.log("Coordinates in url!")
+
 	setDestination(
 		lat && decodeURIComponent(lat[1].replace(/\+/g, ' ')),
 		lon && decodeURIComponent(lon[1].replace(/\+/g, ' ')),
